@@ -41,9 +41,9 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 
 
 function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+ return  orijinalTatlar;
 }
-
+console.log(kopyala())
 
 /* Görev 2:
 Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları kabul etmelidir:
@@ -56,10 +56,16 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+function dizi25Cesitmi(dizi){
+  if(orijinalTatlar.length === 25) {
+    console.log("DOĞRU")
+  } else {
+    console.log("YANLIŞ")
 }
+dizi25Cesitmi(orijinalTatlar)
 
+
+}
 
 /* Görev 3:
 Pastane sahibi size yeni bir lezzet fikriyle geldi: Kakule! Bunun da çok tutacağından çok emin. Bu lezzeti eklemek için diziyi değiştirmeniz gerekir.
@@ -128,10 +134,17 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
-}
+function ismeGoreCesitCikar(dizi,lezzet){
+  for(let i=0 ; i<dizi.length ; i++) {
+    if (dizi[i]===lezzet) {
+      dizi.splice(i,1)
+      
+    }
 
+  }
+  return dizi;
+}
+console.log(ismeGoreCesitCikar(orijinalTatlar,'Muz'))
 
 /* Görev 7:
 
